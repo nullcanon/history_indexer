@@ -1,0 +1,8 @@
+name: 'block_scan'
+mysql:
+  host: ''
+  db: 'aias'
+  password: 'aias.yyds'
+  user: 'aias'
+api: 'https://business.aiachain.org'
+start_block: 25823050

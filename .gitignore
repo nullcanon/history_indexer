@@ -1,0 +1,8 @@
+.DS_Store
+.idea
+*.output.txt
+/logs.txt
+/config.ini
+/bin/
+./history_index
+./nohup.out
