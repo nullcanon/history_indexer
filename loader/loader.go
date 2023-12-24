@@ -183,15 +183,15 @@ func DumpTickerInfoToDB(
 			if balance == nil {
 				continue
 			}
-			user := db.UserBalances{
-				Ticks:   info.Tick,
-				Address: holder,
-				Amount:  balance.String(),
-			}
-			user.Update(
-				map[string]interface{}{
-					"amount": balance.String(),
-				})
+			// user := db.UserBalances{
+			// 	Ticks:   info.Tick,
+			// 	Address: holder,
+			// 	Amount:  balance.String(),
+			// }
+			// user.Update(
+			// 	map[string]interface{}{
+			// 		"amount": balance.String(),
+			// 	})
 			// handlers.GetLogger().Info(ticker, holder)
 			// handlers.GetLogger().Info("Update balance secuess:", holder, " amount: ", balance.String())
 			handlers.UpdateUsers[holder] = false
