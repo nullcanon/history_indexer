@@ -170,32 +170,32 @@ func DumpTickerInfoToDB(
 		// 	" holders:", len(tokenHolders[ticker]))
 
 		// holders
-		_, exists := handlers.Tokens[ticker]
-		if !exists {
-			continue
-		}
+		// _, exists := handlers.Tokens[ticker]
+		// if !exists {
+		// 	continue
+		// }
 
-		for holder, needUpdate := range handlers.UpdateUsers {
-			if !needUpdate {
-				continue
-			}
-			balance := tokenHolders[ticker][holder]
-			if balance == nil {
-				continue
-			}
-			// user := db.UserBalances{
-			// 	Ticks:   info.Tick,
-			// 	Address: holder,
-			// 	Amount:  balance.String(),
-			// }
-			// user.Update(
-			// 	map[string]interface{}{
-			// 		"amount": balance.String(),
-			// 	})
-			// handlers.GetLogger().Info(ticker, holder)
-			// handlers.GetLogger().Info("Update balance secuess:", holder, " amount: ", balance.String())
-			handlers.UpdateUsers[holder] = false
-		}
+		// for holder, needUpdate := range handlers.UpdateUsers {
+		// 	if !needUpdate {
+		// 		continue
+		// 	}
+		// 	balance := tokenHolders[ticker][holder]
+		// 	if balance == nil {
+		// 		continue
+		// 	}
+		// 	// user := db.UserBalances{
+		// 	// 	Ticks:   info.Tick,
+		// 	// 	Address: holder,
+		// 	// 	Amount:  balance.String(),
+		// 	// }
+		// 	// user.Update(
+		// 	// 	map[string]interface{}{
+		// 	// 		"amount": balance.String(),
+		// 	// 	})
+		// 	// handlers.GetLogger().Info(ticker, holder)
+		// 	// handlers.GetLogger().Info("Update balance secuess:", holder, " amount: ", balance.String())
+		// 	handlers.UpdateUsers[holder] = false
+		// }
 	}
 	// handlers.GetLogger().Info("DumpTickerInfoToDB succees ", time.Since(startTime))
 }
